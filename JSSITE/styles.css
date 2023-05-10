@@ -1,0 +1,78 @@
+body{
+    background-color: green;
+}
+a{
+    color: cornflowerblue;
+}
+p{
+      background-color:lightblue;
+      font-size: large;
+}
+li.topnav{
+    display: inline;
+}
+table{
+    border-radius: 10px;
+    border-style: double;
+    border-color: black;
+}
+
+    li.topnav {
+        float: left;
+      }
+    ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color:brown;
+      }
+      
+      
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      /* Change the link color to #111 (black) on hover */
+      li a:hover {
+        background-color: #111;
+      }
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+#div1{
+  width: 500px;
+  height: 300px;
+  border: #111;
+  border-style: double;
+  
+}
+#car {
+  position: relative;
+  cursor: pointer;
+}

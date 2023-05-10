@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function checkAnswer(){
+            if(document.getElementById("NumOfPages").value==4){
+                document.getElementById("answer").innerHTML="That is true";
+            }
+            else{
+                document.getElementById("answer").innerHTML="Wrong ";
+            }
+            
+        }
+      
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+function moveCar() {
+    var car= document.getElementById("car");
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+
+        car.style.left = timePassed / 5 + 'px';
+
+        if (timePassed > 2000) clearInterval(timer);
+
+      }, 20);
+    }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <class="topnav">
+        <li><a href="About.html">About</a></li>
+        <li><a href="Hobby.html">Hobby</a></li>
+        <li><a href="Photography.html">Photography</a></li>
+    </class>
+    
+    <p><h4>Hello, Welcome to My page</h4></p>
+    How Many pages does this site have?<input id="NumOfPages" placeholder="Hint: its greater than 3"> </input>
+    <button onclick="checkAnswer()">Submit</button>
+    <p><h4>and drop the picture in this frame</h4> </p>
+    <p id="answer"></p>
+    <div id="div1"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+    <img id="drag1" height="600px" width="500px" draggable="true" ondragstart="drag(event)" src="Images/indexBG.png" alt="">
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+       function deletegrt(){
+           document.getElementById("Greating").innerHTML=" ";
+           document.getElementById("changebtn").innerHTML=" Deleted!";
+       }
+       function showAltNum(){
+           document.getElementById("pNum").innerHTML=" office Phone: +1 405 123 4566";
+           document.getElementById("altNum").innerHTML="Showing office phone";
+       }
+       </script>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <class="topnav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Hobby.html">Hobby</a></li>
+        <li><a href="Photography.html">Photography</a></li>
+    </class>
+    <button name="bgChange" id="changebtn" onclick="deletegrt()">Delete Greating</button>
+    <br>
+    <P id="Greating">
+        My Name is Nelson BUCYIBARUTA and I am graduate Student.
+    </P>
+    <p>Below are my contact Information. Click to view Information</p>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        }
+        </script>
+
+    <button class="accordion">Address Line 1</button>
+<div class="panel">
+  <p>2104 Silvertree Lane</p>
+</div>
+
+<button class="accordion">Address Line 2</button>
+<div class="panel">
+  <p>Edmond Oklahoma</p>
+</div>
+
+<button class="accordion">Email Address</button>
+<div class="panel">
+  <p>nelson.b@eagles.oc.edu</p>
+</div>
+<script>
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+    <p>Phone Numbers</p>
+    <button id="altNum" onclick="showAltNum()">Show Second Phone Number</button>
+    <p id="pNum"> Cell: +1 502 510 4145</p>
+    <p>Social Media: </p>
+    
+    <p>
+      <a href="https://twitter.com/"><img src="/xampp/htdocs/webpages/JSSITE/Images/twitter.jpg" width="50px" alt=""></a>
+      <a href="https://youtube.com"><img src="/xampp/htdocs/webpages/JSSITE/Images/youtube.png" width="50px"alt=""></a>
+      <a href="https://facebook.com"><img src="/xampp/htdocs/webpages/JSSITE/Images/fb.jpg" width="50px" alt=""></a>
+      <a href="https://instagram.com"><img src="/xampp/htdocs/webpages/JSSITE/Images/ig.jpg" width="50px" alt=""></a>
+    
+</body>
+</html>
